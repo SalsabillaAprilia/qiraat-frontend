@@ -9,7 +9,7 @@ export default function Page() {
           <div className="flex items-center justify-between gap-6">
             <div className="max-w-2xl">
               <h1 className="text-pretty text-2xl font-semibold tracking-tight md:text-3xl">
-                Sistem Identifikasi Bacaan Qiraat
+                Sistem Identifikasi Qiraat
               </h1>
               <p className="mt-3 text-base opacity-90">
                 Unggah rekaman bacaan Al-Qur’an dan identifikasi Qiraat secara otomatis.
@@ -36,7 +36,7 @@ export default function Page() {
       </section>
 
       <footer className="border-t py-6 text-center text-sm text-muted-foreground">
-        © 2025 Sistem Identifikasi Bacaan Qiraat | Salsabilla's Project
+        © 2025 Sistem Identifikasi Qiraat | Salsabilla's Project
       </footer>
     </main>
   )
