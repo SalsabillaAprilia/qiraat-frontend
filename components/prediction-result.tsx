@@ -1,8 +1,8 @@
 "use client"
 
 type Prediction = {
-  label: string
-  confidence: number // 0..1
+  qiraat: string
+  riwayat: string
 }
 
 export function PredictionResult({
@@ -16,7 +16,6 @@ export function PredictionResult({
 }) {
   if (!result && !error) return null
 
-  const percent = result ? Math.round(result.confidence * 100) : 0
   const isError = Boolean(error)
   const toneClass =
     tone === "info"
@@ -34,11 +33,11 @@ export function PredictionResult({
       ) : (
         <>
           <p className="font-medium">
-            Qiraat Teridentifikasi : {result?.label} ({percent}%)
+            Qiraat Teridentifikasi : {result?.qiraat}
           </p>
-          <div className="mt-2 h-2 w-full rounded bg-muted">
-            <div className="h-2 rounded bg-primary" style={{ width: `${percent}%` }} />
-          </div>
+          <p className="font-medium">
+            Riwayat: {result?.riwayat}
+          </p>
         </>
       )}
     </div>
