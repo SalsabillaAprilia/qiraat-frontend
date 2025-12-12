@@ -29,14 +29,11 @@ export function PredictionResult({
       aria-live="polite"
     >
       {isError ? (
-        <p className="font-medium">Terjadi kesalahan: {error}</p>
+        <p className="font-medium">Terjadi Kesalahan: {error}</p>
       ) : (
         <>
           <p className="font-medium">
-            Qiraat Teridentifikasi : {result?.qiraat}
-          </p>
-          <p className="font-medium">
-            Riwayat: {result?.riwayat}
+            Qiraat Teridentifikasi: {result?.qiraat} - Riwayat {result?.riwayat}
           </p>
         </>
       )}
