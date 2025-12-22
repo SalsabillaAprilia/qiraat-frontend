@@ -176,9 +176,9 @@ export function QiraatAnalyzer() {
       );
       const fd = new FormData();
       fd.append("file", file);
-      // Use XMLHttpRequest to track upload progress
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:5000/predict";
-      const uploadPromise: Promise<any> = new Promise((resolve, reject) => {
+        // Use the internal Next.js proxy route.
+        const API_URL = "/api/predict";
+        const uploadPromise: Promise<any> = new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
         xhr.open("POST", API_URL);
         xhr.upload.onprogress = (e) => {
