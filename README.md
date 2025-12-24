@@ -26,7 +26,6 @@ pnpm dev
 
 - UI (browser) mengunggah audio ke frontend pada endpoint `POST /api/predict` (multipart/form-data, field `file`).
 - Next.js (server) menerima request tersebut di `app/api/predict/route.ts` dan meneruskannya ke Flask backend model yang berada di repo terpisah. Ini menjaga URL backend tetap server-side dan aman.
-- Jika Anda perlu, klien bisa dikonfigurasi untuk memanggil backend langsung (override) — lihat variabel lingkungan di bawah.
 
 Contoh `curl` (mengirim ke proxy Next.js):
 
