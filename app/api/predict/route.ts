@@ -9,7 +9,7 @@ export async function POST(req: Request) {
     }
 
     // Forward request to backend model service if configured.
-    const backendUrl = process.env.PREDICT_BACKEND_URL || "http://72.60.78.25:8080/predict"
+    const backendUrl = process.env.PREDICT_BACKEND_URL || "http://localhost:5000/predict"
 
     try {
       const resp = await fetch(backendUrl, {
